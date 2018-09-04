@@ -9,13 +9,8 @@ object castillo {
 	}
 	method valorQueOtorga() = defensa / 5
 	method recibirTrabajo() {
-		if (defensa > 180) {
-			defensa = 200
-		} else {
-			defensa += 20
-		}
+		defensa = (defensa + 20).min(200)
 	}
-
 }
 
 object aurora {
